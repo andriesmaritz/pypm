@@ -1,0 +1,38 @@
+{
+  "ranking": {
+    "enabled": true,
+    "filter": "project = CAT AND status = \"To Do\" AND  Sprint = 907",
+    "increments": {
+      "scoped_quick": 2,
+      "scoped": 1
+    },
+    "priority_labels": {
+      "hotdesk": 2,
+      "scale": 1,
+      "scale-and-reliability": 1,
+      "inbound_feeds": 1
+    },
+    "manual_weights": {
+      "CAT-3927": 3,
+      "CAT-3873": 3,
+      "CAT-3970": 3,
+      "CAT-3212": 5,
+      "CAT-2646": 5,
+      "CAT-4033": 5,
+      "CAT-4019": 10
+    }
+  },
+  "engineers": [
+    "Matt Koevort",
+    "Renier Venter",
+    "Kotie Smit",
+    "Stephan van Ellewee",
+    "Wessel Badenhorst",
+    "Tosyn Oluwafemi",
+    "Armand Botha",
+    "Shane Matuszek",
+    "Doug Taylor"
+  ],
+  "board_name": "Catalogue"
+}
+
