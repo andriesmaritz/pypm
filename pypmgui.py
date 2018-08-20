@@ -23,11 +23,24 @@ class JiraAnalyticsGUI:
         self.txt_output = Text(self.frame_output, width=100, height=30)
         self.txt_output.grid(column=0, row=0)
 
+    def add_button(self, label, func):
+        return Button(self.frame_actions, width=30, text=label, command=func)
+
+    # TODO Input field is created but not accessible/connected
+    def add_input_field(self, label, default=0):
+        widget = Frame(self.frame_actions)
+        w_label = Label(widget, text=label, width=10)
+        w_label.grid(column=0, row=0)
+        w_input = Entry(widget, text=default, width=20)
+        w_input.grid(column=1, row=0)
+        return widget
+
     def add_actions(self):
-        self.actions.append(Button(self.frame_actions, width=20, text="Close", command=self.root.quit))
-        self.actions.append(Button(self.frame_actions, width=20, text="Daily check-in", command=self.daily_check_in))
-        self.actions.append(Button(self.frame_actions, width=20, text="Sprint stats", command=self.sprint_statistics))
-        self.actions.append(Button(self.frame_actions, width=20, text="Rerank", command=self.rerank_backlog))
+        self.actions.append(self.add_input_field("Sprint #", 907))
+        self.actions.append(self.add_button("Daily check-in", self.daily_check_in))
+        self.actions.append(self.add_button("Sprint stats", self.sprint_statistics))
+        self.actions.append(self.add_button("Rerank", self.rerank_backlog))
+        self.actions.append(self.add_button("Close", self.root.quit))
 
         counter = 0
         for action in self.actions:

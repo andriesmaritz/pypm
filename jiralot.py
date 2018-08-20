@@ -9,6 +9,7 @@ logging.basicConfig(format="%(levelname)s - %(message)s", level=logging.DEBUG)
 with open("bin/session.json") as json_data_file:
     session = json.load(json_data_file)
 
+
 class JiraNavigate:
     """
     Wraps the JIRA module to easily obtain information on a project. The underlying
@@ -22,6 +23,10 @@ class JiraNavigate:
     def get_issues(self, jql):
         logging.debug("JQL: %s" % jql)
         return self.jira.search_issues(jql)
+
+    def get_changelog(self, issue):
+        issue = self.jira.issue(self.get_key(issue), expand='changelog')
+        return issue.changelog
 
     def get_comments(self, issue):
         return self.jira.comments(issue)
