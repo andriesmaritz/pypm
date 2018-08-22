@@ -36,7 +36,7 @@ class JiraAnalyticsGUI:
         return widget
 
     def add_actions(self):
-        # self.actions.append(self.add_input_field("Sprint #", 907))
+        self.actions.append(self.add_input_field("Sprint #", 907))
         self.actions.append(self.add_button("Daily check-in", self.daily_check_in))
         self.actions.append(self.add_button("Sprint stats", self.sprint_statistics))
         self.actions.append(self.add_button("Rerank", self.rerank_backlog))
