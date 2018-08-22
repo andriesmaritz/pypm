@@ -37,7 +37,10 @@ class JiraNavigate:
 
     @staticmethod
     def get_assignee(issue):
-        return issue.fields.assignee.displayName
+        if issue.fields.assignee is None:
+            return ""
+        else:
+            return issue.fields.assignee.displayName
 
     @staticmethod
     def get_key(issue):

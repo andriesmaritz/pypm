@@ -8,17 +8,14 @@
     },
     "priority_labels": {
       "hotdesk": 2,
+      "sscm3_journey_4": 2,
       "scale": 1,
-      "scale-and-reliability": 1,
-      "inbound_feeds": 1
+      "scale-and-reliability": 1
     },
     "manual_weights": {
       "CAT-3927": 3,
       "CAT-3873": 3,
       "CAT-3970": 3,
-      "CAT-3212": 5,
-      "CAT-2646": 5,
-      "CAT-4033": 5,
       "CAT-4019": 10
     }
   },
