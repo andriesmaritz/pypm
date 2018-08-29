@@ -103,7 +103,7 @@ class JiraNavigate:
 
     def sprint_interrupt_points(self, sprint_id, board_name):
         jql = "(issueFunction in addedAfterSprintStart(\"{}\", \"{}\"))" \
-              "AND resolution = Unresolved ".format(board_name,
+              "AND resolution = Done ".format(board_name,
                                                     self.jira.sprint(sprint_id))
         logging.debug("JQL sprint_interrupt_points: {}".format(jql))
         interrupt_issues = self.jira.search_issues(jql)

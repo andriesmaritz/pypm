@@ -20,7 +20,7 @@ class JiraAnalyticsGUI:
         self.actions = []
         self.add_actions()
 
-        self.txt_output = Text(self.frame_output, width=100, height=30)
+        self.txt_output = Text(self.frame_output, width=140, height=50)
         self.txt_output.grid(column=0, row=0)
 
     def add_button(self, label, func):
@@ -36,7 +36,7 @@ class JiraAnalyticsGUI:
         return widget
 
     def add_actions(self):
-        self.actions.append(self.add_input_field("Sprint #", 907))
+        # self.actions.append(self.add_input_field("Sprint #", 907))
         self.actions.append(self.add_button("Daily check-in", self.daily_check_in))
         self.actions.append(self.add_button("Sprint stats", self.sprint_statistics))
         self.actions.append(self.add_button("Rerank", self.rerank_backlog))
@@ -71,7 +71,7 @@ class JiraAnalyticsGUI:
 
         text = ""
         for entry in sorted_backlog:
-            text = text + "Score [{}]: {}\n".format(entry["score"], pypm.cat.get_title(entry["issue"]))
+            text = text + "Score [{:.1f}]: {}\n".format(entry["score"], pypm.cat.get_title(entry["issue"]))
         self.update_output(text)
 
 

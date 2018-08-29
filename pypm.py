@@ -153,10 +153,10 @@ def get_sprint_statistics(sprint_id):
     sprint_name = "{}".format(cat.sprint_name(sprint_id))
     print(sprint_name)
     dat = dict(board_name=board_name, sprint_name=sprint_name, sprint_id=sprint_id, statistics={
-        'committed': cat.sprint_committed_points(sprint_id, board_name),
+        'committed_total': cat.sprint_committed_points(sprint_id, board_name),
         'completed': cat.sprint_completed_points(sprint_id, board_name),
         'interrupt': cat.sprint_interrupt_points(sprint_id, board_name),
-        'incomplete': cat.sprint_incomplete_points(sprint_id, board_name)})
+        'committed_incomplete': cat.sprint_incomplete_points(sprint_id, board_name)})
     return dat
 
 

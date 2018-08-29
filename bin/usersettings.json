@@ -1,7 +1,7 @@
 {
   "ranking": {
     "enabled": true,
-    "filter": "project = CAT AND status = \"To Do\" AND  Sprint = 907",
+    "filter": "project = CAT AND status = \"To Do\" AND  Sprint = 913",
     "increments": {
       "scoped_quick": 2,
       "scoped": 1
@@ -9,15 +9,15 @@
     "priority_labels": {
       "hotdesk": 2,
       "sscm3_journey_4": 2,
+      "catalogue_overhaul": 3,
       "scale": 1,
       "scale-and-reliability": 1
     },
     "manual_weights": {
-      "CAT-3927": 3,
-      "CAT-3873": 3,
-      "CAT-3970": 3,
-      "CAT-4019": 10,
-      "CAT-4025": 5
+      "CAT-3970": 5,
+      "CAT-3972": 5,
+      "CAT-3975": 5,
+      "CAT-4025": 3
     }
   },
   "engineers": [
