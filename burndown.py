@@ -16,13 +16,13 @@ def burndown(x, y_committed, y_interrupt):
 
     ax = fig.gca()
     ax.set_xlim(ax.get_xlim()[::-1])
+    ax1.grid(color='#D3D3D3', linestyle=':', linewidth=1)
 
     pyplot.show()
 
 
 def main():
     x = numpy.arange(10, -1, -1)
-
     y_committed = [70, 68, 68, 64, 55, 49, 41, 40, 32, 22, 19]
     y_interrupt = [0, 8, 12, 8, 6, 12, 8, 4, 2, 6, 4]
 
